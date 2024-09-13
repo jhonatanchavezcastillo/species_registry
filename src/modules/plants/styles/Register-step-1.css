@@ -59,6 +59,11 @@
     grid-template-columns: 1fr 1fr 1fr 1fr; /* Dos columnas de igual tamaño */
     gap: 20px; /* Espacio entre columnas y filas */
   }
+  .form-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Dos columnas de igual tamaño */
+    gap: 20px; /* Espacio entre columnas y filas */
+  }
   .form-grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
@@ -90,6 +95,7 @@
   .border-green{
     border: 1px solid #7C9D00;
     border-radius: 5px;
+    padding: 10px;
   }
   .h2-section{
     padding-left: 10px;

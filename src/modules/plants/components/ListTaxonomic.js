@@ -1,8 +1,6 @@
-// src/components/TaxonomicList.js
-
 import React, { useState } from 'react';
 import '../styles/TaxonomicList.css';
-import gear from '../images/gear.png';
+import gear from '../../../images/gear.png';
 
 const TaxonomicList = ({ data }) => {
   const [expanded, setExpanded] = useState({});
