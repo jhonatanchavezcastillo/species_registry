@@ -1,5 +1,5 @@
 import './App.css';
-import Register from '../src/modules/plants/components/Register-step-1';
+import Register from '../src/modules/plants/components/Register-step-2';
 
 function App() {
   return (
