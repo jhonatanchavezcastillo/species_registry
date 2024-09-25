@@ -171,3 +171,30 @@
     transition: background-color 0.3s;
     border: 1px solid #e10032;
   }
+  .text-align{
+    text-align: right;
+  }
+  .text-align-center{
+    text-align: center;
+  }
+  .button-general {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #7C9D00;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 1px solid #7C9D00;
+  }
+
+  .max-widt-200{
+    width: 200px;
+    text-align: center;
+  }
+  .max-width-300px{
+    max-width: 300px;
+  }
+  .margin-top-5px{
+    margin-top: 5px;
+  }
