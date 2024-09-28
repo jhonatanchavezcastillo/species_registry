@@ -1,0 +1,265 @@
+/* src/components/Login.css */
+
+.step-1-container {
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+}
+
+.step-1-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+}
+
+.step-1-form h2 {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #7C9D00;
+    border-radius: 4px;
+}
+
+.step-1-button,
+.step-1-button-principal {
+    width: 100%;
+    padding: 10px;
+    margin-top: 24px;
+    background-color: #ffffff;
+    color: #7C9D00;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 1px solid #7C9D00;
+}
+
+.step-1-button-principal {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 20%;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+.form-grid-6 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.form-grid-5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.form-grid-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.form-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.form-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-grid-center {
+    display: grid;
+    text-align: center;
+    gap: 20px;
+}
+
+.form-grid-button {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    /* Espacio entre columnas y filas */
+}
+
+.step-1-button-principal {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Dos columnas de igual tamaño */
+    gap: 20px;
+    /* Espacio entre columnas y filas */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.padding-left-list-5 {
+    padding-left: 5px;
+}
+
+.border-green {
+    border: 1px solid #7c9d00;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.h2-section {
+    padding-left: 10px;
+}
+
+/* Estilos para las tablas */
+table {
+    width: 80%;
+    margin: 20px auto;
+    /* Centrar la tabla horizontalmente */
+    border-collapse: collapse;
+    /* Quitar espacios entre celdas */
+    background-color: #f9f9f9;
+    /* Fondo claro para la tabla */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombras ligeras */
+}
+
+table th,
+table td {
+    padding: 12px 15px;
+    /* Espaciado interno */
+    text-align: center;
+    /* Centrar texto en celdas */
+    border: 1px solid #ddd;
+    /* Bordes de las celdas */
+}
+
+table th {
+    background-color: #7c9d00;
+    /* Color de fondo del encabezado */
+    color: white;
+    /* Color del texto del encabezado */
+    font-weight: bold;
+    /* Texto en negrita */
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+    /* Fila en color alterno */
+}
+
+table tr:hover {
+    background-color: #ddd;
+    /* Fila al pasar el cursor */
+}
+
+/* Estilos para el botón de seleccionar taxón */
+table button {
+    padding: 8px 12px;
+    background-color: #7c9d00;
+    /* Color de fondo del botón */
+    color: white;
+    /* Color del texto */
+    border: none;
+    /* Sin borde */
+    border-radius: 4px;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Cursor de puntero */
+}
+
+table button:hover {
+    background-color: #7c9d00;
+    /* Color al pasar el cursor por el botón */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+        /* Ajustar el ancho al 100% en pantallas pequeñas */
+    }
+
+    table th,
+    table td {
+        padding: 10px;
+        /* Reducir espaciado en pantallas pequeñas */
+    }
+}
+
+/* Estilo para alinear el input y el botón en la misma fila */
+.input-button-group {
+    display: flex;
+    /* Coloca los elementos en línea */
+    gap: 10px;
+    /* Espacio entre el campo de texto y el botón */
+}
+
+.input-button-group input {
+    flex: 1;
+    /* Hace que el input ocupe la mayor parte del espacio disponible */
+}
+
+.input-button-group button {
+    padding: 10px 20px;
+    /* Ajusta el tamaño del botón */
+    background-color: #7c9d00;
+    /* Color de fondo del botón */
+    color: white;
+    /* Color del texto del botón */
+    border: none;
+    /* Sin borde */
+    border-radius: 4px;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Cursor de puntero */
+    display: grid;
+    text-align: center;
+    gap: 20px;
+}
+
+.input-button-group button:hover {
+    background-color: #7c9d00;
+    /* Color del botón al pasar el mouse */
+}
+.remove-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  .remove-button:hover {
+    background-color: #d32f2f;
+  }
+  .form-container {
+    background-image: url('C:/Users/diego/OneDrive/Documentos/GitHub/species_registry/src/images/pngtree-white-mushroom-stems-that-are-in-the-shape-of-a-mushroom-image_13359206.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    min-height: 100vh; 
+  }
+  
