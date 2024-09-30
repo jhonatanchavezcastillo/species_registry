@@ -5,17 +5,28 @@ import '../styles/Register-step-1.css'; // Asegúrate de crear un archivo CSS pa
 import TaxonomicList from './ListTaxonomic';
 
 const Login = () => {
+  /*Información Nomenclatural*/
   const [niveltaxonomico, setNivelTaxonomico] = useState('');
   const [colector, setColector] = useState('');
-  const [numerocolecta, setNumeroColecta] = useState('');
-  const [nombrecoleccion, setNombreColeccion] = useState('XAL');
   const [numerocatalogo, setNumeroCatalogo] = useState('');
   const [grupoyocolector, setGrupoyoColector] = useState('');
+  const [searchgrupoyocolector, setSearchGrupoyoColector] = useState('');
+  /*Datos de colección*/
+  const [nombrecoleccion, setNombreColeccion] = useState('XAL');
+  const [numerocolecta, setNumeroColecta] = useState('');
+  /*Datos de colecta*/
   const [fechadecolecta, setFechaDeColecta] = useState('');
   const [grupodedeterminador, setSearchGrupoDeDeterminador] = useState('');
-  const [searchgrupoyocolector, setSearchGrupoyoColector] = useState('');
   const [fechadedeterminacion, setFechaDeDeterminacion] = useState('');
   const [tipodedeterminacion, setTipoDeDeterminacion] = useState('');
+  const [duplicados, setDuplicados] = useState('');
+  const [informacionrestringida, setInformacionRestringida] = useState('');
+  const [fechatermino, setFechaTermino] = useState('');
+  /*Información geográfica*/
+  const [pais, setPais] = useState('');
+  const [estado, setEstado] = useState('');
+  const [municipio, setMunicipio] = useState('');
+  const [latitudList, setLatitudList] = useState('');
   
 
 
@@ -139,12 +150,12 @@ const Login = () => {
                 </select>
             </div>
             <div className="form-group">
-                <label htmlFor="numerocolecta">Número de colecta</label>
+                <label htmlFor="numerocatalogo">Número de catálogo</label>
                     <input
-                        type="input"
-                        id="numerocolecta"
-                        value={numerocolecta}
-                        onChange={(e) => setNumeroColecta(e.target.value)}
+                        type="number"
+                        id="numerocatalogo"
+                        value={numerocatalogo}
+                        onChange={(e) => setNumeroCatalogo(e.target.value)}
                         required
                     />
             </div>
@@ -160,7 +171,7 @@ const Login = () => {
         <h2 className='h2-section'>Datos de colección</h2>
         <div className="form-grid-2 border-green">
             <div className="form-group">
-                <label htmlFor="numerocolecta">Nombre de la colección</label>
+                <label htmlFor="nombrecoleccion">Nombre de la colección</label>
                     <input
                         type="input"
                         disabled
@@ -218,8 +229,29 @@ const Login = () => {
                       />
                 </div>
               </div>
+              <div className="form-grid-2 border-green">
+                <div className="form-group">
+                  <label htmlFor="numerocolecta">Número de colecta</label>
+                      <input
+                          type="number"
+                          id="numerocolecta"
+                          value={numerocolecta}
+                          onChange={(e) => setNumeroColecta(e.target.value)}
+                          required
+                      />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="duplicados">Duplicados</label>
+                      <input
+                          type="number"
+                          id="duplicados"
+                          value={duplicados}
+                          onChange={(e) => setDuplicados(e.target.value)}
+                          required
+                      />
+                </div>
+              </div>
             </div> 
-
 
             <div className="form-group">
               <h2 className='h2-section'>Determinación</h2>
@@ -275,11 +307,189 @@ const Login = () => {
                       </select>
                 </div>
               </div>
+              
+              <div className="border-green">
+                <div className="form-grid-1">
+                  <h2 className='h2-section'>Restricciones de uso</h2>
+                </div>
+                <div className="form-grid-2">
+                  <div className="form-group">
+                    <label htmlFor="informacionrestringida">Información restringida</label>
+                        <select
+                            type="input"
+                            id="informacionrestringida"
+                            value={informacionrestringida}
+                            onChange={(e) => setInformacionRestringida(e.target.value)}
+                            required
+                        >
+                            <option value="0">Ninguna</option>
+                            <option value="1">Toda</option>
+                            <option value="2">Localidad</option>
+                        </select>
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="fechadedeterminacion">Fecha término</label>
+                        <input
+                            type="date"
+                            id="fechadedeterminacion"
+                            value={fechadedeterminacion}
+                            onChange={(e) => setFechaDeDeterminacion(e.target.value)}
+                            required
+                        />
+                  </div>
+                </div>
+              </div>
+             
+
             </div>      
         </div>
 
+        <h2>Información geográfica</h2>
+        <div className="border-green">
+          <div className="form-grid-5">
+              <div className="form-group">
+                  <label htmlFor="pais">País</label>
+                  <select
+                      type="input"
+                      id="pais"
+                      value={pais}
+                      onChange={(e) => setPais(e.target.value)}
+                      required
+                  >
+                      <option value="pais">México</option>
+                  </select>
+              </div>
+              <div className="form-group">
+                  <label htmlFor="estado">Estado / State</label>
+                  <select
+                      type="input"
+                      id="estado"
+                      value={estado}
+                      onChange={(e) => setEstado(e.target.value)}
+                      required
+                  >
+                      <option value="1">Veracruz</option>
+                  </select>
+              </div>
+              <div className="form-group">
+                  <button type="submit" className="step-1-button max-width-66px">Nuevo</button>
+              </div>
+              <div className="form-group">
+                  <label htmlFor="municipio">Municipio</label>
+                  <select
+                      type="input"
+                      id="estado"
+                      value={estado}
+                      onChange={(e) => setEstado(e.target.value)}
+                      required
+                  >
+                      <option value="1">Xalapa</option>
+                  </select>
+              </div>
+              <div className="form-group">
+                  <button type="submit" className="step-1-button max-width-66px">Nuevo</button>
+              </div>
+          </div>
+
+          <div className="form-grid-1 max-width-500px">
+              <div className="form-group">
+                <label htmlFor="numerocolecta">Buscar localidad por palabra clave</label>
+                    <input
+                        type="input"
+                        id="grupoyocolector"
+                        value={grupoyocolector}
+                        onChange={(e) => setGrupoyoColector(e.target.value)}
+                        required
+                    />
+                  <select
+                      type="input"
+                      id="latitudList"
+                      value={latitudList}
+                      onChange={(e) => setLatitudList(e.target.value)}
+                      required
+                  >
+                      <option value="1">Xalapa Loc 1</option>
+                      <option value="0">Xalapa Loc 2</option>
+                  </select>
+              </div>
+          </div>
+
+          <div className="form-grid-7">
+              <div className="form-group">
+                  <label htmlFor="pais">Latitud</label>
+                  <input
+                    type="input"
+                    id="colector"
+                    value={colector}
+                    placeholder="Grado"
+                    onChange={(e) => setColector(e.target.value)}
+                />
+              </div>
+              <div className="form-group">
+                  <label htmlFor="pais">.</label>
+                  <input
+                    type="input"
+                    id="colector"
+                    value={colector}
+                    placeholder="Minuto"
+                    onChange={(e) => setColector(e.target.value)}
+                />
+              </div>
+              <div className="form-group">
+                  <label htmlFor="pais">.</label>
+                  <input
+                    type="input"
+                    id="colector"
+                    value={colector}
+                    placeholder="Segundo"
+                    onChange={(e) => setColector(e.target.value)}
+                />
+              </div>
+              <div className="form-group">
+                  <label htmlFor="pais">Longitud</label>
+                  <input
+                    type="input"
+                    id="colector"
+                    value={colector}
+                    placeholder="Grado"
+                    onChange={(e) => setColector(e.target.value)}
+                />
+              </div>
+              <div className="form-group">
+                  <label htmlFor="pais">.</label>
+                  <input
+                    type="input"
+                    id="colector"
+                    value={colector}
+                    placeholder="Minuto"
+                    onChange={(e) => setColector(e.target.value)}
+                />
+              </div>
+              <div className="form-group">
+                  <label htmlFor="pais">.</label>
+                  <input
+                    type="input"
+                    id="colector"
+                    value={colector}
+                    placeholder="Segundo"
+                    onChange={(e) => setColector(e.target.value)}
+                />
+              </div>
+              <div className="form-group">
+                  <label htmlFor="pais">.</label>
+                  <input
+                    type="input"
+                    id="colector"
+                    value={colector}
+                    placeholder="Altitud (m)"
+                    onChange={(e) => setColector(e.target.value)}
+                />
+              </div>
+          </div>
+        </div>
+        
         <div className="form-group">
-            <button type="submit" className="step-1-button-principal">Siguiente</button>
+            <button type="submit" className="step-1-button-principal">Siguiente.</button>
         </div>
       </form>
     </div>
