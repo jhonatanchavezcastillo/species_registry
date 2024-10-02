@@ -3,8 +3,17 @@
 import React, { useState } from 'react';
 import '../styles/Login.css'; // Asegúrate de crear un archivo CSS para estilos
 import logo from '../../../images/logo-inecol.png';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    // Lógica para autenticación aquí (si aplica)
+    // Redirigir al componente destino
+    navigate('/register-step-1');
+  };
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -49,7 +58,7 @@ const Login = () => {
             required
           />
         </div>
-        <button type="submit" className="button-init">Iniciar</button>
+        <button onClick={handleLogin} className="button-init">Iniciar</button>
       </form>
     </div>
   );
