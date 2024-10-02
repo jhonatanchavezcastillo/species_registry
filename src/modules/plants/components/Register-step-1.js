@@ -3,8 +3,17 @@
 import React, { useState } from 'react';
 import '../styles/Register-step-1.css'; // Asegúrate de crear un archivo CSS para estilos
 import TaxonomicList from './ListTaxonomic';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+  const navigate = useNavigate();
+
+  const goToStep2 = () => {
+    // Lógica para autenticación aquí (si aplica)
+    // Redirigir al componente destino
+    navigate('/register-step-2');
+  };
+
   /*Información Nomenclatural*/
   const [niveltaxonomico, setNivelTaxonomico] = useState('');
   const [colector, setColector] = useState('');
@@ -35,9 +44,9 @@ const Login = () => {
 
   
 
-  const handleSubmit = (event) => {
+  /*const goToStep2 = (event) => {
     event.preventDefault();
-  };
+  };*/
 
   // Definimos las familias y géneros en un arreglo
   const data = [
@@ -105,7 +114,7 @@ const Login = () => {
 
   return (
     <div className="step-1-container">
-      <form className="step-1-form" onSubmit={handleSubmit}>
+      <form className="step-1-form">
         <h2>Información nomenclatural</h2>
         <div className="form-grid-4">
             <div className="form-group">
@@ -489,7 +498,7 @@ const Login = () => {
         </div>
         
         <div className="form-group">
-            <button type="submit" className="step-1-button-principal">Siguiente.</button>
+            <button onClick={goToStep2} className="step-1-button-principal">Siguiente</button>
         </div>
       </form>
     </div>

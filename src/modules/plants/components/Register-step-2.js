@@ -2,8 +2,16 @@
 
 import React, { useState } from 'react';
 import '../styles/Register-step-1.css'; // Asegúrate de crear un archivo CSS para estilos
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+    const navigate = useNavigate();
+    const goToStep1 = () => {
+        // Lógica para autenticación aquí (si aplica)
+        // Redirigir al componente destino
+        navigate('/register-step-1');
+    };
+
   /*Información asociada hábit*/
   const [tipovegetacion, setTipoVegetacion] = useState('');
   const [datosetiqueta, setDatosEtiqueta] = useState('');
@@ -325,7 +333,7 @@ const Login = () => {
         <div className="form-grid-4">
             <div className="form-group"></div>
             <div className="form-group">
-                <button type="submit" className="button-back">Atrás</button>
+                <button onClick={goToStep1} className="button-back">Atrás</button>
             </div>
             <div className="form-group">
                 <button type="submit" className="button-finish">Finalizar</button>
