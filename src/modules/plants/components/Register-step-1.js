@@ -11,7 +11,7 @@ const Login = () => {
   const goToStep2 = () => {
     // Lógica para autenticación aquí (si aplica)
     // Redirigir al componente destino
-    navigate('/register-step-2');
+    navigate('/plants-register2');
   };
 
   /*Información Nomenclatural*/

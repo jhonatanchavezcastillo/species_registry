@@ -8,10 +8,18 @@ import { useNavigate } from 'react-router-dom';
 const Login = () => {
   const navigate = useNavigate();
 
+  /**En realiza la petición para inicio de sesión */
   const handleLogin = () => {
-    // Lógica para autenticación aquí (si aplica)
-    // Redirigir al componente destino
-    navigate('/register-step-1');
+    if(email === "diego@th3code.com" && password === "12345"){
+      navigate('/Fungus-register');
+      return;
+    } 
+    if(email === "jhonatan@th3code.com" && password === "12345"){
+      navigate('/plants-register');
+      return;
+    }
+    alert("No pudo iniciar sesión");
+    
   };
 
   const [email, setEmail] = useState('');

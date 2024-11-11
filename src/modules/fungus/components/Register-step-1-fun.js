@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import '../style/Register-step-1-fun.css';
-import useFetchCatalog from '../../../hooks/useFetchCatalog';
+//import useFetchCatalog from '../../../hooks/useFetchCatalog';
 
 
 
 const useFetchCatalog = () => {
-    const { data, loading, error } = useFetchCatalog('modules/fungus');
+    /*const { data, loading, error } = useFetchCatalog('modules/fungus');
   
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error}</p>;
@@ -16,7 +16,7 @@ const useFetchCatalog = () => {
           <p key={item.id}>{item.name}</p>
         ))}
       </div>
-    );
+    );*/
   };
 
 const TablaTaxon = ({ taxones, seleccionarTaxon }) => {
